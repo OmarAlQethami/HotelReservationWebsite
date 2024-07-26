@@ -1,0 +1,53 @@
+﻿    - <siteMap defaultProvider="XmlSiteMapProvider" enabled="true">
+      - <providers>
+        <clear />
+        <add name="XmlSiteMapProvider" 
+             type="System.Web.XmlSiteMapProvider" 
+             siteMapFile="Web.sitemap"
+             securityTrimmingEnabled="true"/>
+      </providers>
+    </siteMap>
+
+    <!--added by ali on 3/16/2014/>-->  
+    <siteMap enabled="true">
+      <providers>
+        <clear/>
+        <add  name="AspNetXmlSiteMapProvider"
+              type="System.Web.XmlSiteMapProvider"
+              siteMapFile="Web.sitemap"
+              securityTrimmingEnabled="true"/>
+      </providers>
+    </siteMap>
+
+    ============
+    http://stackoverflow.com/questions/1452687/asp-net-user-roles-management-where-to-begin  security 
+     <authentication mode="Forms">
+    <forms name=".ASPXFORMSAUTH" loginUrl="~/Common/Login.aspx" timeout="450" />
+  </authentication>
+  <authorization>
+    <deny users="?" />
+    <allow roles="Admin" />
+  </authorization>
+  ==============
+
+  Summary of security on all page level
+  -------------------------------------------
+      <authentication mode="Forms">
+       <forms loginUrl="~/Account/Login.aspx" timeout="450" />
+    </authentication>
+    <authorization>
+      <allow roles="Administrator,Finance" />
+      <deny users="*" />
+    </authorization>
+    // this code will prevent all authenticated users except admin and finance , after login, only 
+    admin and finance will be redirected to the default page, the rest are not allowed due  to deny users
+
+    ====================== check it out
+      <location path="~/Account/Register.aspx">
+    <system.web>
+      <authorization>
+        <allow users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+    ====================

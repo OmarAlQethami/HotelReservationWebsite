@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="HotelWebsiteProjectConStrXXX-Web.config Connection String" description="HotelWebsiteProjectConStrXXX Connection String used in web.config by the application to access the database." defaultValue="Data Source=OTAIBI\SQLEXP2017;Initial Catalog=HotelDB_2024;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Otaib\\Programming\\Summer\ Training\\Projects\\HotelWebsiteProject\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='HotelWebsiteProjectConStrXXX']/@connectionString" />
+  </parameter>
+  <parameter name="HotelWebsiteProjectConStr-Web.config Connection String" description="HotelWebsiteProjectConStr Connection String used in web.config by the application to access the database." defaultValue="Data Source=SQL8006.site4now.net;Initial Catalog=db_aab4f4_hoteldb2024;User Id=db_aab4f4_hoteldb2024_admin;Password=Hotel2030" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Otaib\\Programming\\Summer\ Training\\Projects\\HotelWebsiteProject\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='HotelWebsiteProjectConStr']/@connectionString" />
+  </parameter>
+</parameters>
